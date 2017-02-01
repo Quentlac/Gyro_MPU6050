@@ -34,3 +34,15 @@ int Gyro::getY(){
   return y;
 
 }
+
+int Gyro::getTmp(){
+  Wire.beginTransmission(0x68);
+  Wire.write(0x41);  //adresse pour la temperature
+  Wire.endTransmission(false);
+  Wire.requestFrom(0x68,14,true);  
+  int tmp=Wire.read()<<8|Wire.read(); 
+
+  int temperature = tmp/340.00+36.53;
+  return temperature;
+
+}

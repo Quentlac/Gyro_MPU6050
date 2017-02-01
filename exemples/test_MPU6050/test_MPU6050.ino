@@ -20,6 +20,9 @@ void loop() {
   Serial.print("Angle Y: ");  
   Serial.print(gyro.getY());
   Serial.println(" degre");
+  Serial.print("Temperature: ");  
+  Serial.print(gyro.getTmp());
+  Serial.println(" degre Celcius");
   Serial.println();
   delay(1000);
 

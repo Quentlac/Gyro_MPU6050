@@ -10,6 +10,7 @@ public:
 void begin();
 int getX();
 int getY();
+int getTmp();
 
 };
 
